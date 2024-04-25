@@ -10,18 +10,18 @@ public class SampleExceptions {
 		// 演習２：なぜ例外が起きるか原因を調べてください。そして8行目を変更することにより
 		//         エラーが発生しないようにしてください
 		String nullString = null;
-		//System.out.println(cookString(nullString));
+		System.out.println(cookString(nullString));
 		
 		// 演習３：なぜ例外が起きるか原因を調べてください。そして13行目を変更することにより
 		//         エラーが発生しないようにしてください
 		String oneCharString = "a";
-		//System.out.println(cookString(oneCharString));
+		System.out.println(cookString(oneCharString));
 		
 		// 演習４．１：以下のコード（「ワンモアマイル」まで）、そしてSimpleFileReaderクラス内で何がどのような順番で
 		//         処理されているかコメント文を書いてみましょう
 		// 演習４．２：テキスト１－４　リソース付try文を使ってSimpleFileReaderのreadTextFileメソッドを書き直してください
 		int number = 0;
-		//System.out.println("割り算結果：" + (10 / number));
+		System.out.println("割り算結果：" + (10 / number));
 
 		// ファイル処理
 		SimpleFileReader fileReader = new SimpleFileReader();
