@@ -31,10 +31,10 @@ public class SampleExceptions {
 	 	// ファイル処理
 		SimpleFileReader fileReader = new SimpleFileReader();//ファイル読み込みクラスのインスタンス化
 		fileReader.readTextFile("users.txt");//テキストファイルの読み込み
-		ArrayList<String> lines = fileReader.getLines();//
+		ArrayList<String> lines = fileReader.getLines();//lineというリストを作成してゲットラインを呼び出し
 		
 		int lineCount = 1;
-		for (String line : lines) {
+		for (String line : lines) {//一行ずつ表示
 			System.out.print(lineCount+"行目：");
 			System.out.println(line);
 			lineCount++;
