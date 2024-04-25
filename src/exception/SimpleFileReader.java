@@ -8,11 +8,9 @@ public class SimpleFileReader {
 	private ArrayList<String> lines = new ArrayList<>();
 	
 	public void readTextFile(String path) {
-		try {
-			String line;
-			FileReader fileReader = new FileReader(path);
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			line = bufferedReader.readLine();
+		try(BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
+			String line;//line宣言
+			line = bufferedReader.readLine();//読み込んだ文字列をlineに入れてる、ilneをnullにしないようにする。
 			while (line != null) {
 				lines.add(line);
 				line = bufferedReader.readLine();
@@ -20,7 +18,7 @@ public class SimpleFileReader {
 		}
 		catch (Exception exception) {
 			// 例外が発生した場所を表示
-			exception.printStackTrace();
+			exception.printStackTrace();//エラーの場所内容
 		}
 	}
 	
