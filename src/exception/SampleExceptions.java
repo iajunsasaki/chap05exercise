@@ -6,7 +6,6 @@ public class SampleExceptions {
 	public static void main(String[] args) {
 		// 演習１－４：色んな種類のException、try/catch
 		// 演習１：try/catch。演習２－４のコードをtry/catch文で囲んでみてください。
-		
 		// 演習２：なぜ例外が起きるか原因を調べてください。そして8行目を変更することにより
 		//         エラーが発生しないようにしてください
 		String nullString = null;
