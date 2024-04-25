@@ -8,10 +8,10 @@ public class SimpleFileReader {
 	private ArrayList<String> lines = new ArrayList<>();
 	
 	public void readTextFile(String path) {
-		try(BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
+		try(BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {//closeを自動的にするようにリソースを宣言
 			String line;//line宣言
 			line = bufferedReader.readLine();//読み込んだ文字列をlineに入れてる、ilneをnullにしないようにする。
-			while (line != null) {
+			while (line != null) {//linesリストにlineをすべて代入
 				lines.add(line);
 				line = bufferedReader.readLine();
 			}
